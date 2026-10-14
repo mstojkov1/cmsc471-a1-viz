@@ -1,1 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Elite Colleges</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Admission Rate for Elite Colleges</h1>
+        <p>
+            Across 139 colleges in the United States, children from richer families attend at a far higher rate in comparison to those less fortunate.
+        </p>
+    </header>
 
+    <section id="controls">
+        <label> Measure
+            <select id="metric">
+                <option value="rel_attend">Attendance (compared to average)</option>
+                <option value="rel_apply">Application (compared to average)</option>
+                <option value="rel_attend_cond_app">Attendance if student applied(compared to average)</option>
+            </select>
+        </label>
+        <label>
+            <select id="sector">
+                <option value="all">Public and Private Colleges</option>
+                <option value="Public">Public Colleges</option>
+                <option value="Private">Private Colleges</option>
+            </select>
+        </label>
+        <div id="tier-filters"></div>
+        <button id="reset">Reset</button>
+    </section>
+
+    <main>
+        <figure id="line-fig">
+            <svg id="line-chart"></svg>
+            <figcaption>
+                Each line represents one college. A value of 1.0 means that specific income group attends at the average rate, 
+                and 2.0 means twice the average and so forth
+            </figcaption>
+        </figure>
+
+        <figure id="scatter-fig">
+            <svg id="scatter-chart"></svg>
+            <figcaption>
+                Each dot represents one college. Drag a box to select colleges. Colleges above the diagonal line favor more wealthy families.
+            </figcaption>
+        </figure>
+    </main>
+
+    <div id="tooltip" class="tooltip" hidden></div>
+
+    <section id="writeup">
+        <h2>About this visualization</h2>
+        <h3>Dataset</h3>
+        <p></p>
+        <h3>Design decisions and interactions</h3>
+        <p>TODO:</p>
+        <h3>References</h3>
+        <p>TODO:.</p>
+        <h3>Development process</h3>
+        <p>TODO:</p>
+        <h3>AI usage</h3>
+        <p>TODO:</p>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
